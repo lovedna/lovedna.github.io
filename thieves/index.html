@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+	<meta charset="utf-8">
+	<title>神偷之王</title>
+	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<script>
+		window.addEventListener('touchmove', function (event) { event.preventDefault (); }, {capture: false,passive: false});
+		if (typeof window.devicePixelRatio != 'undefined') {
+			var meta = document.getElementById ("viewport");
+			var scale=2 / window.devicePixelRatio;
+			if(window.devicePixelRatio <= 2)
+			{
+				scale=1 / window.devicePixelRatio;
+			}
+			meta.setAttribute ('content', 'width=device-width, initial-scale=' +scale + ', user-scalable=no');
+		}
+	</script>
+	<style>
+		html,body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+		.bg{ position:absolute; left:0px; top:0px; background:#00000000; width:100%; height:100%;background: linear-gradient(to bottom, #ABCDEF , #4477aa);}
+	</style>
+	
+</head>
+<body>
+	<div class="bg"><canvas id="webgl"></canvas></div> 
+	<div id="loading" align="center" style="position: absolute;width:100%; height:100%left:50%;top:50%; ">正在加载,请稍等...</div>\
+	<script type="text/javascript">
+		function load(url,callback){
+			var script=document.body.appendChild(document.createElement('script'));
+			script.onload=function(){ callback(); }
+			script.src=url;
+		}
+		function versionSuccess()
+		{
+			var len=count;
+			while(len-- > 0) { load(list[len]+"?"+version,init) }
+		}
+		function init()
+		{
+			if(--count >0)return;
+			//var vConsole = new VConsole();
+			var config={init:gameInit,canvas:document.getElementById("webgl"),version:version};
+			if(location.search.length>1)
+			{
+				config["get"]=location.search.substring(1);
+			}
+			try{
+				lovedna.game.Game.config(config);
+			}catch(e)
+			{
+				alert(e);
+			}
+		}
+		function gameInit(){
+			document.getElementById("loading").style.display="none";
+		}
+		var version=new Date().getTime();
+		var trace=console.log;
+		var list=["game.js","lib/pako.min.js","lib/howler.min.js"];
+		//list.push("lib/vconsole.min.js");
+		var count=list.length;
+		load('version.js?'+version,versionSuccess);
+	</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+data/data.bin,2469,1960927801
+default/font_en.png,10960,778895887
+default/splash.jpg,60947,599673491
+default/ui.png,7072,-156853815
+font/ch.png,221281,-443283539
+image/map/1.jpg,120529,-512171418
+image/map/2.jpg,121352,1108833360
+image/map/3.jpg,114159,-433212760
+image/map/4.jpg,121922,-969844883
+image/map/5.jpg,96951,1860686090
+image/map/back_castle.jpg,6826,-526225141
+image/map/grid.png,1139,-903011716
+image/map/wall_castle.jpg,18599,245301350
+image/pack.png,213440,-1160635624
+image/ui/lockBg.jpg,83207,831583658

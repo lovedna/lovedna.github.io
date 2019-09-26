@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="left-down" width="16" height="10" tilewidth="50" tileheight="50" infinite="0" nextlayerid="5" nextobjectid="29">
+ <tileset firstgid="1" name="wall" tilewidth="50" tileheight="50" tilecount="1" columns="1">
+  <image source="wall.png" width="50" height="50"/>
+ </tileset>
+ <layer id="1" name="墙" width="16" height="10">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,
+1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,
+1,1,1,0,0,1,1,0,0,1,1,0,0,1,1,1,
+1,1,1,0,0,1,1,0,0,1,1,0,0,1,1,1,
+1,1,1,0,0,1,1,0,0,1,1,0,0,1,1,1,
+1,1,1,0,0,1,1,0,0,1,1,0,0,1,1,1,
+1,1,1,0,0,1,1,0,0,1,1,0,0,1,1,1,
+1,1,1,0,0,1,1,0,0,1,1,0,0,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+</data>
+ </layer>
+ <objectgroup id="4" name="对象">
+  <object id="6" template="门.tx" x="172" y="435"/>
+  <object id="7" template="宝箱.tx" x="573" y="438"/>
+  <object id="28" template="红魔鬼.tx" x="181" y="139">
+   <properties>
+    <property name="length" type="int" value="9"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

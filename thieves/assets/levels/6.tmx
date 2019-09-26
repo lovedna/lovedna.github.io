@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="left-down" width="16" height="10" tilewidth="50" tileheight="50" infinite="0" nextlayerid="3" nextobjectid="6">
+ <tileset firstgid="1" name="wall" tilewidth="50" tileheight="50" tilecount="1" columns="1">
+  <image source="wall.png" width="50" height="50"/>
+ </tileset>
+ <layer id="1" name="墙" width="16" height="10">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,
+1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,
+1,0,0,0,0,1,1,1,1,1,1,0,0,0,0,1,
+1,0,0,0,0,1,1,1,1,1,1,0,0,0,0,1,
+1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
+1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+</data>
+ </layer>
+ <objectgroup id="2" name="对象层 1">
+  <object id="1" template="门.tx" x="324.333" y="136.333"/>
+  <object id="3" template="齿轮.tx" x="226" y="194.333">
+   <point/>
+  </object>
+  <object id="4" template="宝箱.tx" x="629.667" y="241.667">
+   <point/>
+  </object>
+  <object id="4" template="齿轮.tx" x="124" y="190"/>
+  <object id="5" template="炮手.tx" x="724" y="342">
+   <properties>
+    <property name="direction" type="int" value="4"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
