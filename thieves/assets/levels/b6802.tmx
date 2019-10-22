@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="2018.07.13" orientation="orthogonal" renderorder="left-down" width="16" height="10" tilewidth="50" tileheight="50" infinite="0" nextlayerid="3" nextobjectid="20">
+<map version="1.0" tiledversion="2018.07.13" orientation="orthogonal" renderorder="left-down" width="16" height="10" tilewidth="50" tileheight="50" infinite="0" nextlayerid="3" nextobjectid="22">
  <tileset firstgid="1" name="wall" tilewidth="50" tileheight="50" tilecount="1" columns="1">
   <image source="wall.png" width="50" height="50"/>
  </tileset>
@@ -12,20 +12,21 @@
  <layer id="1" name="墙" width="16" height="10">
   <data encoding="csv">
 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,
-1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,
-1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,
-1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,
-1,0,0,1,1,0,0,0,0,0,0,1,1,0,0,1,
-1,0,0,1,1,0,0,0,0,0,0,1,1,0,0,1,
-1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,
-1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,
+1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,
+1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,
+1,0,0,0,0,1,1,0,0,1,1,0,0,0,0,1,
+1,0,0,0,0,1,1,0,0,1,1,0,0,0,0,1,
+1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,
+1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,
+1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
+1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 </data>
  </layer>
  <objectgroup id="2" name="对象">
-  <object id="1" template="门.tx" x="679" y="439"/>
-  <object id="2" template="宝箱.tx" x="327" y="339"/>
-  <object id="17" template="齿轮.tx" x="424" y="342"/>
+  <object id="1" template="门.tx" x="471" y="141"/>
+  <object id="2" template="宝箱.tx" x="69" y="241"/>
+  <object id="16" template="反重力.tx" x="578" y="341"/>
+  <object id="21" template="齿轮.tx" x="326" y="282"/>
  </objectgroup>
 </map>

@@ -9,28 +9,22 @@
  <tileset firstgid="3" name="弹簧" tilewidth="100" tileheight="50" tilecount="1" columns="1">
   <image source="board2.png" width="100" height="50"/>
  </tileset>
- <layer id="1" name="墙" width="16" height="10" record="19,71,145,215,290">
+ <layer id="1" name="墙" width="16" height="10">
   <data encoding="csv">
 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
 1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,
-1,2,0,0,0,1,1,0,0,0,0,0,0,0,0,1,
+1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,
 1,0,0,1,1,1,1,0,0,0,0,0,0,0,0,1,
-1,0,0,1,1,1,1,0,0,0,0,0,0,0,0,1,
+1,0,0,1,1,1,1,0,0,0,0,0,0,2,0,1,
 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
-1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
-1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,
+1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
+1,1,1,1,1,1,1,0,0,2,0,0,0,0,0,1,
 1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,
 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 </data>
  </layer>
  <objectgroup id="2" name="对象">
-  <object id="1" template="门.tx" x="73" y="193"/>
-  <object id="2" template="宝箱.tx" x="68" y="345"/>
-  <object id="13" template="炮手.tx" x="227" y="140">
-   <properties>
-    <property name="direction" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="14" template="导弹.tx" x="224" y="85"/>
+  <object id="1" template="门.tx" x="574" y="144"/>
+  <object id="2" template="宝箱.tx" x="173" y="141"/>
  </objectgroup>
 </map>
