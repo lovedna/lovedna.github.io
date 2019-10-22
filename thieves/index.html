@@ -24,7 +24,7 @@
 	
 </head>
 <body>
-	<div class="bg"><canvas id="webgl"></canvas></div> 
+	<div class="bg"><canvas id="webgl" ></canvas></div> 
 	<div id="loading" align="center" style="position: absolute;width:100%; height:100%left:50%;top:50%; ">正在加载,请稍等...</div>\
 	<script type="text/javascript">
 		function load(url,callback){
@@ -41,7 +41,11 @@
 		{
 			if(--count >0)return;
 			//var vConsole = new VConsole();
-			var config={init:gameInit,canvas:document.getElementById("webgl"),version:version};
+			var renderCanvas=document.getElementById("webgl");
+			renderCanvas.width=window.innerWidth;
+			renderCanvas.height=window.innerHeight;
+			window.addEventListener("resize",resizeHandler);
+			var config={init:gameInit,canvas:renderCanvas,version:version};
 			if(location.search.length>1)
 			{
 				config["get"]=location.search.substring(1);
@@ -55,6 +59,12 @@
 		}
 		function gameInit(){
 			document.getElementById("loading").style.display="none";
+		}
+		function resizeHandler(e)
+		{
+			var renderCanvas=document.getElementById("webgl");
+			renderCanvas.width=window.innerWidth;
+			renderCanvas.height=window.innerHeight;
 		}
 		var version=new Date().getTime();
 		var trace=console.log;
